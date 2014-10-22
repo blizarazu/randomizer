@@ -1,0 +1,17 @@
+<ion-view title="Random number">
+	<ion-nav-buttons side="left">
+		<button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+	</ion-nav-buttons>
+	<ion-content class="has-header">
+		<h1>
+			<div class="random" ng-class="{'finished-random': finished}"><center>{{random | numberFixedLen:getDigitCount()}}</center></div>
+		</h1>
+	</ion-content>
+	<ion-footer-bar class="bar-stable">
+		<div class="button-bar">
+			<button class="button icon ion-minus-round button-dark button-clear" ng-click="decrementDigit()" ng-disabled="getDigitCount() <= 1"></button>
+			<button class="button icon ion-refresh button-dark button-clear" ng-click="animateNewRandom()"></button>
+			<button class="button icon ion-plus-round button-dark button-clear" ng-click="incrementDigit()" ng-disabled="getDigitCount() >= maxDigits"></button>
+		</div>
+	</ion-footer-bar>
+</ion-view>

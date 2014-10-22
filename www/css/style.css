@@ -1,0 +1,13 @@
+/* Empty. Add your own CSS if you like */
+
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+.random {
+	font-family: 'Oswald', sans-serif;
+	color: #F7D358;
+	margin:30px auto;
+}
+
+.finished-random {
+	color: rgb(18, 131, 39);
+}

@@ -1,7 +1,7 @@
 {
   "name": "randomizer",
   "version": "1.0.0",
-  "description": "randomizer: An Ionic project",
+  "description": "Create any kind of random things",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

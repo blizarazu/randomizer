@@ -40,6 +40,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'filters'])
       }
     })
 
+    .state('app.question', {
+      url: "/question",
+      views: {
+        'menuContent' :{
+          templateUrl: "templates/question.html",
+          controller: 'QuestionCtrl'
+        }
+      }
+    });
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/random_number');
 });

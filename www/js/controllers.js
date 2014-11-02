@@ -12,7 +12,7 @@ angular.module('starter.controllers', [])
   $scope.maxDigits = 15;
 
   function newRandom(digits) {
-    var digits = typeof digits !== 'undefined'? digits : 1;
+    digits = typeof digits !== 'undefined'? digits : 1;
 
     var random = Math.floor((Math.random() * 10));
     for (var i = 1; i < digits; i++)
@@ -32,7 +32,7 @@ angular.module('starter.controllers', [])
     }, delay)
     .finally(function(){
       timerCount--;
-      $scope.finished = timerCount == 0;
+      $scope.finished = timerCount === 0;
       console.log(timerCount);
     });
     delay = delay + duration / (rep - i);
@@ -57,7 +57,11 @@ $scope.$on('$viewContentLoaded', animateNewRandom());
 $scope.animateNewRandom = animateNewRandom;
 $scope.getDigitCount = function() {
   return digitCount;
-}
+};
 $scope.incrementDigit = incrementDigit;
 $scope.decrementDigit = decrementDigit;
+})
+
+.controller('QuestionCtrl', function($scope){
+  
 });

@@ -33,7 +33,7 @@ angular.module('starter.controllers', [])
     .finally(function(){
       timerCount--;
       $scope.finished = timerCount === 0;
-      console.log(timerCount);
+      //console.log(timerCount);
     });
     delay = delay + duration / (rep - i);
   }
@@ -62,6 +62,14 @@ $scope.incrementDigit = incrementDigit;
 $scope.decrementDigit = decrementDigit;
 })
 
-.controller('QuestionCtrl', function($scope){
-  
+.controller('QuestionsCtrl', function($scope, questions){
+  $scope.questions = questions;
+  console.log($scope.questions);
+})
+
+.controller('AddQuestionCtrl', function($scope){
+  $scope.question = {};
+  $scope.addQuestion = function(){
+    questions.push($scope.question);
+  };
 });

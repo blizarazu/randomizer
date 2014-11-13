@@ -1,0 +1,16 @@
+<ion-view title="Add question">
+	<ion-content class="has-header">
+		<label class="item item-input">
+			<input type="text" placeholder="Question" ng-model="question.question"></input>
+		</label>
+		<div class="list list-inset">
+			<label class="item item-input" ng-repeat="answer in question.answers">
+				<input type="text" ng-model="answer"></input>
+			</label>
+			<label class="item item-input">
+				<input type="text" placeholder="Answer"></input>
+			</label>
+		</div>
+		<label ng-repeat="answer in answers">{{question.answer}}</label>
+	</ion-content>
+</ion-view>
